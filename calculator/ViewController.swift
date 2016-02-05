@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     //variables
     @IBOutlet weak var numberLabel: UILabel!
-    var calculations: Int = 0
+    var calculations: Double = 0
     var labelString: String = "0"
     
     
@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculateClicked(sender: AnyObject) {
+        calculations = Double(labelString)!
     }
     
     @IBAction func decimalClicked(sender: AnyObject) {
@@ -56,7 +57,7 @@ class ViewController: UIViewController {
     @IBAction func multiplyClicked(sender: AnyObject) {
         if labelString == "0"{}
         else{
-            labelString += "x"
+            labelString += "*"
         }
         
         numberLabel.text = labelString
