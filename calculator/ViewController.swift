@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var numberLabel: UILabel!
     var calculations: Double = 0
     var labelString: String = "0"
-    
+    var position: Int = 0
+    var values: [String] = []
     
     //button clicked functions
     @IBAction func clearClicked(sender: AnyObject) {
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
         if labelString == "0"{}
         else{
             labelString += "."
+            values[position] += "."
         }
         
         numberLabel.text = labelString
@@ -39,7 +41,11 @@ class ViewController: UIViewController {
     @IBAction func plusclicked(sender: AnyObject) {
         if labelString == "0"{}
         else{
+            position++
+            values[position] = "+"
             labelString += "+"
+            position++
+            
         }
         
         numberLabel.text = labelString
@@ -48,7 +54,9 @@ class ViewController: UIViewController {
     @IBAction func minusClicked(sender: AnyObject) {
         if labelString == "0"{}
         else{
+            values[++position] += "-"
             labelString += "-"
+            position++
         }
         
         numberLabel.text = labelString
@@ -57,7 +65,9 @@ class ViewController: UIViewController {
     @IBAction func multiplyClicked(sender: AnyObject) {
         if labelString == "0"{}
         else{
+            values[++position] += "*"
             labelString += "*"
+            position++
         }
         
         numberLabel.text = labelString
@@ -66,7 +76,9 @@ class ViewController: UIViewController {
     @IBAction func dividClicked(sender: AnyObject) {
         if labelString == "0"{}
         else{
+            values[++position] += "/"
             labelString += "/"
+            position++
         }
         
         numberLabel.text = labelString
@@ -76,6 +88,7 @@ class ViewController: UIViewController {
         if labelString == "0"{}
         else{
             labelString += "0"
+            values[position] += "0"
         }
         
         numberLabel.text = labelString
@@ -87,6 +100,7 @@ class ViewController: UIViewController {
         }
         else{
             labelString += "1"
+            values[position] += "1"
         }
         
         numberLabel.text = labelString
@@ -98,6 +112,7 @@ class ViewController: UIViewController {
         }
         else{
             labelString += "2"
+            values[position] += "2"
         }
         
         numberLabel.text = labelString
@@ -109,6 +124,7 @@ class ViewController: UIViewController {
         }
         else{
             labelString += "3"
+            values[position] += "3"
         }
         
         numberLabel.text = labelString
@@ -120,6 +136,7 @@ class ViewController: UIViewController {
         }
         else{
             labelString += "4"
+            values[position] += "4"
         }
         
         numberLabel.text = labelString
@@ -131,6 +148,7 @@ class ViewController: UIViewController {
         }
         else{
             labelString += "5"
+            values[position] += "5"
         }
         
         numberLabel.text = labelString
@@ -142,6 +160,7 @@ class ViewController: UIViewController {
         }
         else{
             labelString += "6"
+            values[position] += "6"
         }
         
         numberLabel.text = labelString
@@ -153,6 +172,7 @@ class ViewController: UIViewController {
         }
         else{
             labelString += "7"
+            values[position] += "7"
         }
         
         numberLabel.text = labelString
@@ -164,6 +184,7 @@ class ViewController: UIViewController {
         }
         else{
             labelString += "8"
+            values[position] += "8"
         }
         
         numberLabel.text = labelString
@@ -175,6 +196,7 @@ class ViewController: UIViewController {
         }
         else{
             labelString += "9"
+            values[position] += "9"
         }
         
         numberLabel.text = labelString
