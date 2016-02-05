@@ -15,16 +15,7 @@ class ViewController: UIViewController {
     var calculations: Int = 0
     var labelString: String = "0"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
     //button clicked functions
     @IBAction func clearClicked(sender: AnyObject) {
         numberLabel.text =  "0"
@@ -32,20 +23,52 @@ class ViewController: UIViewController {
         calculations = 0
     }
     
+    @IBAction func calculateClicked(sender: AnyObject) {
+    }
+    
+    @IBAction func decimalClicked(sender: AnyObject) {
+        if labelString == "0"{}
+        else{
+            labelString += "."
+        }
+        
+        numberLabel.text = labelString
+    }
+    
     @IBAction func plusclicked(sender: AnyObject) {
-        if calculations == 0{}
+        if labelString == "0"{}
+        else{
+            labelString += "+"
+        }
+        
+        numberLabel.text = labelString
     }
     
     @IBAction func minusClicked(sender: AnyObject) {
-        if calculations == 0{}
+        if labelString == "0"{}
+        else{
+            labelString += "-"
+        }
+        
+        numberLabel.text = labelString
     }
     
     @IBAction func multiplyClicked(sender: AnyObject) {
-        if calculations == 0{}
+        if labelString == "0"{}
+        else{
+            labelString += "x"
+        }
+        
+        numberLabel.text = labelString
     }
     
     @IBAction func dividClicked(sender: AnyObject) {
-        if calculations == 0{}
+        if labelString == "0"{}
+        else{
+            labelString += "/"
+        }
+        
+        numberLabel.text = labelString
     }
     
     @IBAction func zeroClicked(sender: AnyObject) {
